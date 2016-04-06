@@ -38,7 +38,7 @@ public class DVD extends Soporte{
 
     @Override
     public String toString(){
-        return "DVD{" + "Duración" + duracion +", Actor=" + actor[0] + "," + actor[1] + "}";
+        return "DVD{"+ super.toString() + "Duración" + duracion +", Actor=" + actor[0] + "," + actor[1] + "}";
     }
     
 }
