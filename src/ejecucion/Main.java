@@ -26,9 +26,7 @@ public class Main {
                System.out.println("Desea continuar...1. Si 2. No");
                opcion = scanner.nextInt();
                if(opcion != 1)
-                  indicador = true;
-           
-             
+                  indicador = true;  
         }
     }
     

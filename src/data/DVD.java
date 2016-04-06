@@ -36,5 +36,9 @@ public class DVD extends Soporte{
         this.duracion = duracion;
     }
 
+    @Override
+    public String toString(){
+        return "DVD{" + "Duración" + duracion +", Actor=" + actor[0] + "," + actor[1] + "}";
+    }
     
 }

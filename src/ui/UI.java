@@ -31,7 +31,7 @@ public class UI {
     public void imprimirSoportes(ArrayList<Soporte> soportes){
         if(soportes != null){
           for(Soporte soporte: soportes){
-              System.out.println(soporte);
+              System.out.println(soporte);//Me imprime el esatdo de elementos
           }
         }else{
             System.out.println("No existen soportes actualmente");
@@ -41,7 +41,7 @@ public class UI {
     public void menu(){
         int opcion = 0;     
         System.out.println("Bienvenido a la mediateca");
-        System.out.println("Opciones. 1. Cargar datos 2. Imprimir.");
+        System.out.println("Opciones. 1. Cargar datos 2. Imprimir 3.Buscar Soporte");
         opcion = this.sc.nextInt();
         if(opcion == 1){
            System.out.println("Nombre del archivo: ");
@@ -57,7 +57,17 @@ public class UI {
         else if(opcion == 2){
            ArrayList<Soporte> soportes = this.servicio.getSoportes();
            this.imprimirSoportes(soportes);
-        }else{
+        }
+        else if (opcion == 3){
+            System.out.println("Ingrese el titulo a buscar");
+            String titulo = sc.next();
+            Soporte soporte = this.servicio.buscarSoporte(titulo);
+            if (soporte != null)
+                System.out.println(soporte);
+            else 
+                System.out.println("No existe material disponible");
+        }
+        else{
             System.out.println("Opcion invalida");
         }
     

@@ -10,7 +10,7 @@ import dao.Dao;
 import data.Soporte;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-
+//Todos los requerimientos funcionales que va a tener la alplicacion
 /**
  *
  * @author fabian.giraldo
@@ -30,6 +30,13 @@ public class ServicioSoporte {
       return this.soportes;
     }
     
+    public Soporte buscarSoporte(String titulo){
+        for (Soporte soporte : this.soportes){
+            if (soporte.getTitulo().equals(titulo))
+                return soporte;
+        }
+        return null;
+    }
    
     
 }
